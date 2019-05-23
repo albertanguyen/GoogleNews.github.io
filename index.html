@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta class="keywords" content="HTML, CSS. Javascript" />
+    <!-- Import Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"
+        rel="stylesheet" />
+    <!--Import social icons font-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+        integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+
+    <!--Import font family-->
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Oswald" />
+
+    <!--Import customized stylesheet-->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="icon" href="img/Brunch-Run-logo.jpg" type="image/x-icon" />
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/locale/af.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.20.1/moment.min.js"></script>
+
+    <!-- https://www.obsessedbyportia.com/wp-content/uploads/2017/01/Brunch-Run-logo.jpg -->
+    <title>Google News</title>
+</head>
+
+<body style="padding-top:80px">
+    <nav class="navbar bg-light navbar-expand-lg navbar-light fixed-top mb-5 bg-grey bg-transparent">
+        <div class="container">
+            <img src="img/BrunchBox_logo.jpg" alt="coderschool-logo" width="15%">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menu-items">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="menu-items">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item ml-3 pt-1">
+                        <a class="nav-link text-uppercase text-white" href="#">News</a>
+                    </li>
+                    <li class="nav-item ml-3 pt-1">
+                        <a class="nav-link text-uppercase text-white" href="#">Games</a>
+                    </li>
+                    <li class="nav-item ml-3 pt-1">
+                        <a class="nav-link text-uppercase text-white" href="#">Your Todo List</a>
+                    </li>
+                    <li class="nav-item ml-3 pt-1">
+                        <a class="nav-link text-uppercase text-white" href="#">About Us</a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+
+    <header class="text-center mx-auto mt-5" style="padding-top: 100px; padding-bottom: 60px;">
+        <h1 class="text-uppercase" style="font-family: Oswald;">
+            <span style="color: #F2A900;">NEWS BRUNCH</span></h1>
+        <!-- Coded with love by Mutiullah Samim-->
+        <div class="container h-100">
+            <div class="d-flex justify-content-center h-100">
+                <div class="searchbar">
+                    <input class="search_input" type="text" placeholder="Life is short..." id="UserInput">
+                    <a href="#" class="add_icon" onclick="main()"><i class="fa fa-plus-circle"></i></a>
+                </div>
+            </div>
+        </div>
+        <!-- modified with love by me. Thank you so much!!! -->
+    </header>
+
+    <section class="card-deck text-center px-5 mg-5">
+        <div class="card-rows mb-4 bg-transparent col-12">
+            <div class="card mb-4 box-shadow bg-transparent">
+                <ul id="">
+
+                </ul>
+            </div>
+            <!-- <div class="card mb-4 box-shadow">
+            <ul id="">
+
+            </ul>
+        </div> -->
+            <div class="d-flex d-inline-flex col-md-8 px-5">
+                <ul id="TechnewsList">
+
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <footer class="page-footer font-small special-color-dark" style="padding-botom: ">
+
+        <div class="container w-100">
+            <div class="text-center mx-auto my-5 py-5" style="font-family: Oswald;">
+                <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <!-- <div class="carousel-item active"> -->
+                        <ul class="carousel-item active" id="MusicNews">
+
+                        </ul>
+                        <!-- <div class="jumbotron jumbotron-1">
+                               </div>
+                           </div>
+                           <div class="carousel-item">
+                               <div class="jumbotron jumbotron-2">
+                               </div>
+                           </div>
+                           <div class="carousel-item">
+                               <div class="jumbotron jumbotron-3">
+                               </div> -->
+                        <!-- </div> -->
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- <div class="row">
+                <ul id="MusicnewsList">
+                </ul>
+                <div class="tc pv2 flex items-center justify-center">
+                    <div class="w-10 tc">
+                        <button class="black-20 pointer pa2 bg-white prev" style="border:none;"><i
+                                class="fa fa-chevron-left"></i></button>
+                    </div>
+                    <div class="w-80">Top business headlines in the US right now</div>
+                    <div class="w-10 tc">
+                        <button class="black-20 pointer pa2 bg-white next" style="border:none;"><i
+                                class="fa fa-chevron-right"></i></button>
+                    </div>
+                </div>
+
+            </div> -->
+        </div>
+
+        <div class="footer-copyright text-center py-3 text-white">© 2019 Copyright:
+            <a href="https://mdbootstrap.com/education/bootstrap/"> Anhanh.com</a>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
+    <!--Import Java Script-->
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
