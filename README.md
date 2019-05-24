@@ -1,4 +1,4 @@
-# CoderSchool FTW - * Name of Your Project Here *
+# CoderSchool FTW - * News Brunch *
 
 Created with love by: <Your Name Here>
 
