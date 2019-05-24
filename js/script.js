@@ -1,23 +1,6 @@
 const TechNewshtml = () => document.getElementById("TechnewsList");
-const MusicNewshtml = () => document.getElementById("MusicNews");
-
-const renderTechNewsFeed = newsArticles => {
-  let html = "";
-  // console.log(newsArticles.length)
-  
-  newsArticles.map(
-    ({ title, description, urlToImage, publishedAt, url, content }) => {
-      const htmlnode = `
-			<h1 style="font-family: Oswald; color:white;">${title}</h1>
-			<img src="${urlToImage}" style="display: inline-block; height: auto; width: 80% ">
-      <h3>${description}</h3> <h5>${moment(publishedAt).startOf('day').fromNow()}</h5>
-            <p>${content}</p>
-            <p><a href="${url}">Jump right here for more...</a></p>`;
-      const jsnode = (html += htmlnode);
-      TechNewshtml().innerHTML = jsnode;
-    }
-  );
-};
+const BusinessNewshtml = () => document.getElementById("BusinessNews");
+const TechNumArticleshtml = () => document.getElementById('NumberArticles')
 
 const getTechNewsData = async () => {
   const url =
@@ -27,6 +10,31 @@ const getTechNewsData = async () => {
   const { articles } = await res.json();
   renderTechNewsFeed(articles);
 };
+
+const renderTechNewsFeed = newsArticles => {
+  let html = "";
+  // console.log(newsArticles.length) 
+  newsArticles.filter( (element, idx) => {
+          const htmlnode = `
+			<h1 style="font-family: Oswald; color:white;">${element.title}</h1>
+			<img src="${element.urlToImage}" style="display: inline-block; height: auto; width: 80% ">
+      <h3>${element.description}</h3> <h5>${moment(element.publishedAt).startOf("day").fromNow()}</h5>
+            <p>${element.content}</p>
+            <p><a href="${element.url}">Jump right here for more...</a></p>`;
+          const jsnode = html += htmlnode;
+          TechNewshtml().innerHTML = jsnode;      
+  }
+  );
+  TechNumArticles(newsArticles);
+
+};
+
+const TechNumArticles = newsArticles => {
+  TechNumArticleshtml().innerHTML = `Currently: ${newsArticles.length} articles`;
+}; 
+
+const FeedNews = (shortNewsList, addNewsList) => addNewsList.forEach(element => shortNewsList.push(element))
+
 
 // const renderMusicNewsFeed = newsArticles => {
 //     let html = "";
